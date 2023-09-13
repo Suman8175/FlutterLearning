@@ -1,0 +1,11 @@
+goto android=>app=>build.gradle and add in  existing default config:
+
+defaultConfig {
+      this line  multiDexEnabled true;
+    }
+
+and in 
+
+dependencies {
+    implementation 'com.android.support:multidex:1.0.3'
+}

@@ -1,0 +1,10 @@
+Future<int> multiplyByTen(int a) {
+  return Future.delayed(Duration(seconds: 5), () => a * 10);
+//.deplayed is same as setTimeout in js ,(Duration(seconds: 5) means Timeout of 5 seconds and  () => a * 10 is non-named function which returns a*10
+}
+
+void test() async {
+  final val = await multiplyByTen(5);
+//If await is not written it will return instance of Future<datatype>
+  print(val);
+}

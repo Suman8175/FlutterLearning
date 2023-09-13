@@ -1,0 +1,5 @@
+flutter create --org com.sumdev noteshandler
+
+
+com.sumdev=> is your domain name(mostly apps are launched by companies who have website)
+noteshandler => is your Application Name.It should be in lowercase even the first letter.

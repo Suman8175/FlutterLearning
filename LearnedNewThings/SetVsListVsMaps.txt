@@ -1,0 +1,3 @@
+Set:Set is a collection of unique datas.For eg:You cannot have {1,1,2,3,4,5} or{'Suman','Bart','Suman'} as there are repeated value.
+List:List in dart is almost same as Array in other programming language.
+Maps:Maps contains key and value assigned to it.For eg: var mapping={'first':'Suman','last':'devkota'}

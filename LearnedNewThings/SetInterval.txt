@@ -1,0 +1,9 @@
+Stream<int> valueOfNumbers(int a) {
+  return Stream.periodic(const Duration(seconds: 3), (value) => a + value);
+}
+
+void test() async {
+  await for (final value in valueOfNumbers(5)) {
+    print(value);
+  }
+}

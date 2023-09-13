@@ -1,0 +1,14 @@
+class Pair<A, B> {
+  final A value1;
+  final B value2;
+
+  Pair(this.value1, this.value2);
+}
+
+void tr() {
+  final pair1 = Pair('Suman', 'Devkota');
+  debugPrint('${pair1.value1} ${pair1.value2}');
+  final pair2 = Pair(12, 18);
+  final valuer = pair2.value1 + pair2.value2;
+  print(valuer);
+}

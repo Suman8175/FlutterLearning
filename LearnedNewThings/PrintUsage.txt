@@ -1,0 +1,3 @@
+In flutter it is bad practise to directly use print(func1());
+Rather use debugPrint(func1());
+Note:debugPrint can only print String values.So you can convert number into string when printing by num1.toString()

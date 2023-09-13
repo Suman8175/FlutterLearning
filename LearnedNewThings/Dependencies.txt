@@ -1,0 +1,7 @@
+to add dependencies use command (Dependencies are added in pubspec.yaml)
+flutter pub add dependencies_name
+Some dependencies are:
+firebase_core
+firebase_auth
+cloud_firestore
+firebase_analytics
