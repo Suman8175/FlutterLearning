@@ -1,0 +1,38 @@
+appbar has different properties:
+ ....title:const Text('AppbarTitle', style: TextStyle(color: Colors.white, fontStyle: FontStyle.italic),)                                =>TextStyle is used inside Text as it colors title
+ ....backgroundColor:Colors.blue    	=>Use to color Background of AppBar
+ ....toolbarHeight:45                   =>Use to give height to AppBar of 45 logical pixels
+ ....centerTitle:bool                   =>if true it centers the title
+ 
+
+
+
+
+1.For Gradient Color Title
+
+class HomePage extends StatelessWidget {
+  const HomePage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+        title: const Text(
+          'Notes Handler',
+          style: TextStyle(color: Color.fromARGB(255, 249, 249, 251)),
+        ),
+        flexibleSpace: Container(
+          decoration: const BoxDecoration(
+            gradient: LinearGradient(
+              colors: [Colors.blue, Colors.green], // List of gradient colors
+              begin:
+                  Alignment.centerLeft, // Alignment of the gradient start point
+              end: Alignment.centerRight, // Alignment of the gradient end point
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}

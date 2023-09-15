@@ -1,0 +1,12 @@
+
+Only 1 time install{
+flutter pub add firebase_core
+Install firebase CLI through npm install -g firebase-tools
+not recommended to use appliaction.
+}
+
+
+do it in every project{
+flutterfire configure
+
+}
