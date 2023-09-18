@@ -1,0 +1,142 @@
+Flutter supports image formats
+
+ 
+
+JPEG
+PNG
+GIF
+WebP
+BMP
+WBMP
+ 
+
+Properties
+
+ 
+
+width
+semanticLabel
+runtimeType
+repeat
+matchTextDirection
+loadingBuilder
+isAntiAlias
+image
+height
+gaplessPlayback
+frameBuilder
+fit
+filterQuality
+excludeFromSemantics
+errorBuilder
+colorBlendMode
+color
+centerslice
+alignment
+ 
+
+Example 1:
+
+ 
+
+Center(
+
+          child: Image.asset('image/abc.jpg'),
+
+        ),
+
+ 
+
+Example 2:
+
+ 
+
+Center(
+
+          child: Image.asset(
+
+            'image/abc.jpg',
+
+            height: 400,
+
+            fit: BoxFit.contain,
+
+          ),
+
+        ),
+
+ 
+
+Example 3:
+
+ 
+
+Image.asset(
+
+            'image/abc.jpg',
+
+            height: 400,
+
+            fit: BoxFit.contain,
+
+            color: Colors.grey,
+
+            colorBlendMode: BlendMode.darken,
+
+          ),
+
+ 
+
+Example 4:
+
+ 
+
+Image.asset(
+
+            'image/abc.jpg',
+
+            height: 400,
+
+            fit: BoxFit.contain,
+
+            color: Colors.grey,
+
+            colorBlendMode: BlendMode.darken,
+
+            semanticLabel: 'Egg emoji',
+
+          ),
+
+ 
+
+Example 5:
+
+ 
+
+Image.asset(
+
+            'image/abc.jpg',
+
+            height: 400,
+
+            fit: BoxFit.contain,
+
+            color: Colors.grey,
+
+            matchTextDirection: true,
+
+          ),
+
+ 
+
+Example 6:
+
+ 
+
+Center(
+
+          child: Image.network(
+
+              "https://cdn.pixabay.com/photo/2021/04/25/10/51/poppy-6206112_960_720.jpg"),
+
+        ),

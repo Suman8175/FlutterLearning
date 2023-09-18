@@ -1,0 +1,48 @@
+The "Column" widget in Flutter is a multi-purpose layout widget that is used to display its children in a vertical fashion, similar to the Row widget but with a default direction of Axis.vertical.
+
+ 
+
+The Column widget takes several properties, including:
+
+ 
+
+children: a list of widgets that are placed inside the Column.
+mainAxisAlignment: the alignment of the children along the main axis. It can be one of MainAxisAlignment.start, MainAxisAlignment.end, MainAxisAlignment.center, MainAxisAlignment.spaceBetween, MainAxisAlignment.spaceAround, or MainAxisAlignment.spaceEvenly.
+crossAxisAlignment: the alignment of the children along the cross axis. It can be one of CrossAxisAlignment.start, CrossAxisAlignment.end, CrossAxisAlignment.center, CrossAxisAlignment.stretch, or CrossAxisAlignment.baseline.
+mainAxisSize: the size of the main axis. It can be MainAxisSize.max or MainAxisSize.min.
+
+
+
+Column(
+
+    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+
+    children: [
+
+        FlatButton(
+
+            onPressed: () {},
+
+            child: Text('Button 1'),
+
+        ),
+
+        FlatButton(
+
+            onPressed: () {},
+
+            child: Text('Button 2'),
+
+        ),
+
+        FlatButton(
+
+            onPressed: () {},
+
+            child: Text('Button 3'),
+
+        ),
+
+    ],
+
+)

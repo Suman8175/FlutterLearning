@@ -1,0 +1,114 @@
+A material design card: a panel with slightly rounded corners and an elevation shadow.
+
+ 
+
+Properties:
+
+ 
+
+child
+color
+shape
+shadowColor
+elevation
+margin
+border0nForeground
+clipBehavior
+semanticContainer
+ 
+
+Example:
+
+ 
+
+import 'package:flutter/material.dart';
+
+
+
+void main() {
+
+  runApp(
+
+    MaterialApp(
+
+      home: Scaffold(
+
+        appBar: AppBar(
+
+          title: const Text(
+
+            'Sample App',
+
+          ),
+
+        ),
+
+        body: Container(
+
+          height: 200,
+
+          width: 200,
+
+          child: Card(
+
+            color: Colors.blue,
+
+            shape: RoundedRectangleBorder(
+
+              borderRadius: BorderRadius.circular(4.0),
+
+            ),
+
+          ),
+
+        ), // Card
+
+      ),
+
+    ),
+
+  );
+
+}
+
+ 
+
+elevation
+
+ 
+
+Card(
+
+            color: Colors.blue,
+
+            elevation: 5.0,
+
+          ),
+
+ 
+
+margin
+
+ 
+
+Card(
+
+            color: Colors.blue,
+
+            margin: EdgeInsets.all(10.0),
+
+          ),
+
+ 
+
+shadowColor
+
+ 
+
+Card(
+
+            color: Colors.blue,
+
+            shadowColor: Colors.red,
+
+          ),

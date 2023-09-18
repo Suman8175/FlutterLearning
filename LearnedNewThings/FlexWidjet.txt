@@ -1,0 +1,49 @@
+The "Flexible" widget, on the other hand, also takes a single child and expands it to fill remaining space but it also allows the child to shrink if the Flex container becomes smaller than the total size of its children. It also takes a single property called "flex" which is a positive number that determines the proportion of remaining space the child should take up. 
+
+
+
+
+body: Center(
+        child: Container(
+          // color: Colors.pink,
+          alignment: Alignment.center,
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Flexible(
+                // direction: Axis.horizontal,
+                child: Container(
+                  // width: 132,
+                  alignment: Alignment.center,
+                  color: Colors.blue,
+                  child: const Text(
+                    'First',
+                    style: TextStyle(),
+                  ),
+                ),
+              ),
+              Flexible(
+                child: Container(
+                  alignment: Alignment.topCenter,
+                  // width: 132,
+                  color: Colors.black,
+                  child: const Text(
+                    'Second',
+                    style: TextStyle(color: Colors.white),
+                  ),
+                ),
+              ),
+              Flexible(
+                // flex: 1,//Use to give how much space to occupy
+                child: Container(
+                  alignment: Alignment.bottomCenter,
+                  // width: 100,
+                  color: Colors.purple,
+                  child: const Text('Third'),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),

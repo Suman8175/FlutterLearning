@@ -1,0 +1,58 @@
+
+        body: Flex(
+          direction: Axis.vertical,
+          children: [
+            Flexible(
+              flex: 4,
+              child: Container(
+                alignment: Alignment.center,
+                color: Colors.red,
+                child: const Text('First'),
+              ),
+            ),
+            Flexible(
+              child: Row(children: [
+                Flexible(
+                    child: Column(
+                  children: [
+                    Expanded(
+                      child: Container(
+                        color: Colors.grey,
+                      ),
+                    ),
+                    Flexible(
+                      child: Container(
+                        color: Colors.yellow,
+                      ),
+                    ),
+                  ],
+                )),
+                Expanded(
+                  child: Container(
+                    color: Colors.amber,
+                  ),
+                ),
+                Expanded(
+                  child: Container(
+                    color: Colors.blue,
+                  ),
+                ),
+                Expanded(
+                  child: Container(
+                    color: Colors.purple,
+                  ),
+                )
+              ]),
+            ),
+            Flexible(
+              flex: 2,
+              child: Container(
+                alignment: Alignment.center,
+                color: Colors.green,
+                child: const Text('First'),
+              ),
+            ),
+          ],
+        ));
+  }
+}

@@ -1,0 +1,183 @@
+Properties
+
+ 
+
+iconfize
+visualDensity
+padding
+alignment
+icon
+color
+focusColor
+hoverColor
+splashColor
+highlightColor
+disabledColor
+onPressed
+focus ode
+bool
+tooltip
+enableFeedback
+ 
+
+Example 1:
+
+ 
+
+import 'dart:developer';
+
+
+
+import 'package:flutter/material.dart';
+
+
+
+void main() {
+
+  runApp(
+
+    MaterialApp(
+
+      home: Scaffold(
+
+        appBar: AppBar(),
+
+        body: Center(
+
+          child: Center(
+
+            child: IconButton(
+
+              icon: Icon(Icons.bubble_chart),
+
+              onPressed: () {},
+
+              iconSize: 100,
+
+            ),
+
+          ),
+
+        ),
+
+      ),
+
+    ),
+
+  );
+
+}
+
+ 
+
+Example 2:
+
+ 
+
+Center(
+
+          child: IconButton(
+
+            icon: Icon(Icons.bubble_chart),
+
+            onPressed: () {},
+
+            iconSize: 100,
+
+            tooltip: 'Buuble',
+
+          ),
+
+        ),
+
+ 
+
+Example 3:
+
+ 
+
+IconButton(
+
+            icon: Icon(Icons.bubble_chart),
+
+            onPressed: () {},
+
+            iconSize: 100,
+
+            disabledColor: Colors.yellow,
+
+          ),
+
+ 
+
+Example 4:
+
+ 
+
+IconButton(
+
+            icon: Icon(Icons.bubble_chart),
+
+            onPressed: () {},
+
+            iconSize: 100,
+
+            splashColor: Colors.yellow,
+
+          ),
+
+ 
+
+Example 5:
+
+ 
+
+IconButton(
+
+            icon: Icon(Icons.bubble_chart),
+
+            onPressed: () {},
+
+            iconSize: 100,
+
+            highlightColor: Colors.yellow,
+
+          ),
+
+ 
+
+Example 6:
+
+ 
+
+IconButton(
+
+            icon: Icon(Icons.bubble_chart),
+
+            onPressed: () {},
+
+            iconSize: 100,
+
+           splashRadius: 10,
+
+          ),
+
+ 
+
+Example 7:
+
+ 
+
+IconButton(
+
+            icon: Image.network(
+
+                "https://cdn.pixabay.com/photo/2016/06/16/08/42/monster-1460885 960"),
+
+            onPressed: () {},
+
+            iconSize: 100,
+
+            splashRadius: 10,
+
+          ),

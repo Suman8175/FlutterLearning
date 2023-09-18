@@ -21,32 +21,35 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          // elevation: 0,
-          title: const Text(
-            'Welcome User',
-            style: TextStyle(color: Colors.white, fontStyle: FontStyle.italic),
-          ),
-          backgroundColor: Colors.deepPurple,
-          toolbarHeight: 55,
-          centerTitle: true,
-          actions: [
-            Container(
-              height: 64.0,
-              width: 64.0,
-              padding: const EdgeInsets.only(right: 24.9, bottom: 15),
-              child: IconButton(
-                icon: const Icon(Icons.account_circle),
-                iconSize: 38,
-                color: Colors.white,
-                tooltip: 'Open login button',
-                onPressed: () {},
+      title: const Text(
+        'Hello User',
+        style: TextStyle(
+            color: Colors.black,
+            fontStyle: FontStyle.italic,
+            fontWeight: FontWeight.bold,
+            letterSpacing: 4,
+            wordSpacing: 12,
+            shadows: [
+              Shadow(
+                color: Colors.pink,
+                blurRadius: 4.0,
+                offset: Offset(14, 4),
+              )
+            ]),
+      ),
+      backgroundColor: Colors.white,
+      titleSpacing: 24,
+      actions: [
+        Container(
+            padding: const EdgeInsets.only(right: 32.5),
+            child: IconButton(
+              onPressed: () {},
+              icon: const Icon(
+                Icons.settings,
               ),
-            ),
-          ],
-        ),
-        body: TextButton(
-          onPressed: () {},
-          child: const Text('Login'),
-        ));
+              iconSize: 29.5,
+            ))
+      ],
+    ));
   }
 }

@@ -1,0 +1,300 @@
+Properties
+
+ 
+
+child
+autofocus
+backgroundColor
+clipBehaviour
+disabledElevation
+elevation
+focusColor
+focusElevtion
+focusNode
+foregroundColor
+heorTag
+highlightElevation
+hoverColor
+hoverElevation
+isExtended
+materialTapTargetsize
+mini
+mouseCursor
+onPressed
+splashColor
+shape
+ 
+
+Example 1:
+
+ 
+
+import 'dart:developer';
+
+
+
+import 'package:flutter/material.dart';
+
+
+
+void main() {
+
+  runApp(
+
+    MaterialApp(
+
+      home: Scaffold(
+
+        appBar: AppBar(),
+
+        body: Center(
+
+          child: Text('Data'),
+
+        ),
+
+        floatingActionButton: FloatingActionButton(
+
+          child: Icon(Icons.add),
+
+          onPressed: () {},
+
+        ),
+
+      ),
+
+    ),
+
+  );
+
+}
+
+ 
+
+Example 2:
+
+ 
+
+floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+
+        floatingActionButton: FloatingActionButton(
+
+          child: Icon(Icons.add),
+
+          onPressed: () {},
+
+        ),
+
+ 
+
+Two types of FloatingActionButtons
+
+ 
+
+FloatingActionButton
+FloatingActionButton.extended
+ 
+
+Example 3:
+
+ 
+
+floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
+
+        floatingActionButton: FloatingActionButton.extended(
+
+          label: Icon(Icons.add),
+
+          onPressed: () {},
+
+        ),
+
+ 
+
+Example 4:
+
+ 
+
+floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
+
+        floatingActionButton: FloatingActionButton(
+
+          child: Icon(
+
+            Icons.add,
+
+          ),
+
+          onPressed: () {},
+
+          foregroundColor: Colors.yellow,
+
+        ),
+
+ 
+
+Example 5:
+
+ 
+
+floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
+
+        floatingActionButton: FloatingActionButton(
+
+          child: Icon(
+
+            Icons.add,
+
+          ),
+
+          onPressed: () {},
+
+          backgroundColor: Colors.brown,
+
+        ),
+
+ 
+
+Example 6:
+
+ 
+
+floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
+
+        floatingActionButton: FloatingActionButton(
+
+          child: Icon(
+
+            Icons.add,
+
+          ),
+
+          onPressed: () {},
+
+          mini: true,
+
+        ),
+
+ 
+
+Example 7:
+
+ 
+
+floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
+
+        floatingActionButton: FloatingActionButton(
+
+          child: Icon(
+
+            Icons.add,
+
+          ),
+
+          onPressed: () {},
+
+          shape: RoundedRectangleBorder(),
+
+        ),
+
+ 
+
+Example 8:
+
+ 
+
+floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
+
+        floatingActionButton: FloatingActionButton(
+
+          child: Icon(
+
+            Icons.add,
+
+          ),
+
+          onPressed: () {},
+
+          shape: RoundedRectangleBorder(
+
+            borderRadius: BorderRadius.all(
+
+              Radius.circular(30),
+
+            ),
+
+          ),
+
+        ),
+
+ 
+
+Example 9:
+
+ 
+
+floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
+
+        floatingActionButton: FloatingActionButton(
+
+          child: Icon(
+
+            Icons.add,
+
+          ),
+
+          onPressed: () {},
+
+          shape: RoundedRectangleBorder(
+
+            side: BorderSide(width: 2, color: Colors.black),
+
+          ),
+
+        ),
+
+ 
+
+Example 10:
+
+ 
+
+floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
+
+        floatingActionButton: FloatingActionButton(
+
+          child: Icon(
+
+            Icons.add,
+
+          ),
+
+          onPressed: () {},
+
+          elevation: 50,
+
+        ),
+
+ 
+
+Example 11:
+
+ 
+
+floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
+
+        floatingActionButton: FloatingActionButton(
+
+          child: Icon(
+
+            Icons.add,
+
+          ),
+
+          onPressed: () {},
+
+          elevation: 30,
+
+          highlightElevation: 50,
+
+        ),

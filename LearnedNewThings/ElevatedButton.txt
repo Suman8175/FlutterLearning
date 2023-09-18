@@ -1,0 +1,285 @@
+Properties
+
+ 
+
+onPressed
+onLongPress
+style
+focusNode
+autofocus
+clipBehavior
+child
+ 
+
+To give design to button use 
+ style: const ButtonStyle(
+                    backgroundColor: MaterialStatePropertyAll(Colors.redAccent),
+                  )
+in ElevatedButton Widjet or Any Button Widjet
+
+
+Example 1:
+
+ 
+
+import 'dart:developer';
+
+
+
+import 'package:flutter/material.dart';
+
+
+
+void main() {
+
+  runApp(
+
+    MaterialApp(
+
+      home: Scaffold(
+
+        appBar: AppBar(),
+
+        body: ElevatedButton(
+
+          child: Text('Button'),
+
+          onPressed: () {
+
+            print('Press');
+
+          },
+
+          onLongPress: () {
+
+            print('Long Press');
+
+          },
+
+        ),
+
+      ),
+
+    ),
+
+  );
+
+}
+
+ 
+
+Example 2:
+
+ 
+
+ElevatedButton(
+
+          child: Text('Button'),
+
+          onPressed: null,
+
+        ),
+
+ 
+
+Example 3:
+
+ 
+
+ElevatedButton.icon(
+
+          label: Text('Button'),
+
+          icon: Icon(Icons.bubble_chart),
+
+          onPressed: () {},
+
+        ),
+
+ 
+
+Example 4:
+
+ 
+
+ConstrainedBox(
+
+          constraints: BoxConstraints.tightFor(height: 100, width: 100),
+
+          child: ElevatedButton(
+
+            child: Text('Button'),
+
+            onPressed: () {},
+
+          ),
+
+        ),
+
+ 
+
+Example 5:
+
+ 
+
+ConstrainedBox(
+
+          constraints: BoxConstraints.tightFor(height: 100, width: 100),
+
+          child: ElevatedButton(
+
+            child: Text('Button'),
+
+            onPressed: () {},
+
+            style: ElevatedButton.styleFrom(
+
+              primary: Colors.brown,
+
+            ),
+
+          ),
+
+        ),
+
+ 
+
+Example 6:
+
+ 
+
+ConstrainedBox(
+
+          constraints: BoxConstraints.tightFor(height: 100, width: 100),
+
+          child: ElevatedButton(
+
+            child: Text('Button'),
+
+            onPressed: () {},
+
+            style: ElevatedButton.styleFrom(
+
+              primary: Colors.brown,
+
+              textStyle: TextStyle(fontSize: 25, fontStyle: FontStyle.italic),
+
+            ),
+
+          ),
+
+        ),
+
+ 
+
+Example 7:
+
+ 
+
+ConstrainedBox(
+
+          constraints: BoxConstraints.tightFor(height: 100, width: 100),
+
+          child: ElevatedButton(
+
+            child: Text('Button'),
+
+            onPressed: () {},
+
+            style: ElevatedButton.styleFrom(
+
+              primary: Colors.brown,
+
+              textStyle: TextStyle(fontSize: 25, fontStyle: FontStyle.italic),
+
+              elevation: 25,
+
+              shadowColor: Colors.yellow,
+
+            ),
+
+          ),
+
+        ),
+
+ 
+
+Example 8:
+
+ 
+
+ConstrainedBox(
+
+          constraints: BoxConstraints.tightFor(height: 100, width: 100),
+
+          child: ElevatedButton(
+
+            child: Text('Button'),
+
+            onPressed: () {},
+
+            style: ElevatedButton.styleFrom(
+
+              primary: Colors.brown,
+
+              textStyle: TextStyle(fontSize: 25, fontStyle: FontStyle.italic),
+
+              elevation: 25,
+
+              shadowColor: Colors.yellow,
+
+              side: BorderSide(
+
+                color: Colors.black,
+
+                width: 3,
+
+              ),
+
+            ),
+
+          ),
+
+        ),
+
+ 
+
+Example 9:
+
+ 
+
+ConstrainedBox(
+
+          constraints: BoxConstraints.tightFor(height: 100, width: 100),
+
+          child: ElevatedButton(
+
+            child: Text('Button'),
+
+            onPressed: () {},
+
+            style: ElevatedButton.styleFrom(
+
+              primary: Colors.brown,
+
+              textStyle: TextStyle(fontSize: 25, fontStyle: FontStyle.italic),
+
+              elevation: 25,
+
+              shadowColor: Colors.yellow,
+
+              shape: BeveledRectangleBorder(
+
+                borderRadius: BorderRadius.all(
+
+                  Radius.circular(10),
+
+                ),
+
+              ),
+
+            ),
+
+          ),
+
+        ),

@@ -1,0 +1,389 @@
+Properties:
+
+child
+color
+margin
+padding
+height and width
+alignment
+constraints
+transform
+decoration
+ 
+
+Example:
+
+ 
+
+import 'package:flutter/material.dart';
+
+
+
+void main() {
+
+  runApp(
+
+    MaterialApp(
+
+      home: Scaffold(
+
+        appBar: AppBar(
+
+          title: const Text(
+
+            'Sample App',
+
+          ),
+
+        ),
+
+        body: Center(
+
+          child: Container(
+
+            child: const Text(
+
+              'Hello World',
+
+              style: TextStyle(fontSize: 30),
+
+            ),
+
+            color: Colors.orange,
+
+          ),
+
+        ),
+
+      ),
+
+    ),
+
+  );
+
+}
+
+ 
+
+height and width
+
+ 
+
+height: 200,
+
+width: 200,
+
+ 
+
+alignment
+
+ 
+
+alignment: Alignment.center,
+
+ 
+
+padding
+
+ 
+
+padding: const EdgeInsets.fromLTRB(10, 20, 30, 40),
+
+ 
+
+margin
+
+ 
+
+margin: const EdgeInsets.all (30),
+
+ 
+
+constraints
+
+ 
+
+constraints: const BoxConstraints.expand(),
+
+
+
+constraints: const BoxConstraints (maxHeight: 100, maxWidth: 150),
+
+ 
+
+transform
+
+ 
+
+transform: Matrix4.rotationZ(25.0),
+
+
+
+transform: Matrix4.skewX(3.0)..rotateZ(20.0),
+
+
+
+decoration
+
+ 
+
+decoration: const BoxDecoration(
+
+              color: Colors.orange,
+
+            ),
+
+ 
+
+border
+
+ 
+
+decoration: BoxDecoration(
+
+              color: Colors.orange,
+
+              border: Border.all(
+
+                color: Colors.black,
+
+                width: 3,
+
+                style: BorderStyle.solid,
+
+              ),
+
+            ),
+
+
+
+decoration: const BoxDecoration(
+
+              color: Colors.orange,
+
+              border: Border(
+
+                top: BorderSide(color: Colors.black, width: 2),
+
+                bottom: BorderSide(color: Colors.black, width: 4),
+
+              ),
+
+            ),
+
+
+
+decoration: const BoxDecoration(
+
+              color: Colors.orange,
+
+              border: Border(
+
+                top: BorderSide(color: Colors.black, width: 2),
+
+                bottom: BorderSide(color: Colors.black, width: 4),
+
+                left: BorderSide(color: Colors.blue, width: 3),
+
+                right: BorderSide(color: Colors.blue, width: 5),
+
+              ),
+
+            ),
+
+ 
+
+borderRadius
+
+ 
+
+decoration: BoxDecoration(
+
+              color: Colors.orange,
+
+              border: Border.all(
+
+                color: Colors.black,
+
+                width: 3.0,
+
+                style: BorderStyle.solid,
+
+              ),
+
+              borderRadius: const BorderRadius.all(
+
+                Radius.circular(30.0),
+
+              ),
+
+            ),
+
+
+
+decoration: BoxDecoration(
+
+              color: Colors.orange,
+
+              border: Border.all(
+
+                color: Colors.black,
+
+                width: 3.0,
+
+                style: BorderStyle.solid,
+
+              ),
+
+              borderRadius: BorderRadius.circular(40),
+
+            ),
+
+
+
+decoration: BoxDecoration(
+
+              color: Colors.orange,
+
+              border: Border.all(
+
+                color: Colors.black,
+
+                width: 3.0,
+
+                style: BorderStyle.solid,
+
+              ),
+
+              borderRadius: const BorderRadius.only(
+
+                topLeft: Radius.circular(25),
+
+                bottomLeft: Radius.circular(25),
+
+              ),
+
+            ),
+
+ 
+
+boxShadow
+
+ 
+
+decoration: BoxDecoration(
+
+              color: Colors.orange,
+
+              border: Border.all(
+
+                color: Colors.black,
+
+                width: 3.0,
+
+                style: BorderStyle.solid,
+
+              ),
+
+              boxShadow: const [
+
+                BoxShadow(
+
+                  blurRadius: 15.0,
+
+                  color: Colors.grey,
+
+                ),
+
+              ],
+
+            ),
+
+
+
+decoration: BoxDecoration(
+
+              color: Colors.orange,
+
+              border: Border.all(
+
+                color: Colors.black,
+
+                width: 3.0,
+
+                style: BorderStyle.solid,
+
+              ),
+
+              boxShadow: const [
+
+                BoxShadow(
+
+                  blurRadius: 50.0,
+
+                  color: Colors.grey,
+
+                  offset: Offset(5.0, 5.0),
+
+                ),
+
+              ],
+
+            ),
+
+ 
+
+
+shape
+
+decoration: BoxDecoration(
+shape:Boxshape.circle,
+
+),
+
+
+
+
+gradient
+
+ 
+
+decoration: BoxDecoration(
+
+              color: Colors.orange,
+
+              border: Border.all(
+
+                color: Colors.black,
+
+                width: 3.0,
+
+                style: BorderStyle.solid,
+
+              ),
+
+              boxShadow: const [
+
+                BoxShadow(
+
+                  blurRadius: 50.0,
+
+                  color: Colors.grey,
+
+                  offset: Offset(5.0, 5.0),
+
+                ),
+
+              ],
+
+              gradient: const LinearGradient(
+
+                begin: Alignment.centerRight,
+
+                end: Alignment.centerLeft,
+
+                colors: [Colors.yellow, Colors.lightGreen],
+
+              ),
+
+            )

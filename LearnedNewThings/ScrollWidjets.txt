@@ -1,0 +1,170 @@
+Properties
+
+ 
+
+Child
+Controller
+Padding
+Physics
+Primary
+Reverse
+scroliDirection
+ 
+
+Example:
+
+ 
+
+import 'package:flutter/material.dart';
+
+
+
+void main() {
+
+  runApp(
+
+    MaterialApp(
+
+      home: Scaffold(
+
+        appBar: AppBar(
+
+          title: const Text(
+
+            'Sample App',
+
+          ),
+
+        ),
+
+        body: SingleChildScrollView(
+
+          child: Column(
+
+            children: [
+
+              Container(
+
+                height: 400,
+
+                color: Colors.limeAccent,
+
+              ),
+
+              Container(
+
+                height: 400,
+
+                color: Colors.pinkAccent,
+
+              ),
+
+            ],
+
+          ),
+
+        ),
+
+      ),
+
+    ),
+
+  );
+
+}
+
+ 
+
+physics
+
+ 
+
+SingleChildScrollView(
+
+          physics: const ScrollPhysics(),
+
+          child: Column(
+
+            children: [
+
+              Container(
+
+                height: 400,
+
+                color: Colors.limeAccent,
+
+              ),
+
+              Container(
+
+                height: 400,
+
+                color: Colors.pinkAccent,
+
+              ),
+
+            ],
+
+          ),
+
+        ),
+
+ 
+
+NeverScrollableScrollPhysics
+
+ 
+
+physics: NeverScrollableScrollPhysics(),
+
+ 
+
+FixedExtentScrollPhysics
+
+ 
+
+physics: FixedExtentScrollPhysics(),
+
+ 
+
+reverse
+
+ 
+
+reverse: true,
+
+ 
+
+scrolldirection
+
+ 
+
+SingleChildScrollView(
+
+          scrollDirection: Axis.horizontal,
+
+          child: Column(
+
+            children: [
+
+              Container(
+
+                height: 400,
+
+                color: Colors.limeAccent,
+
+              ),
+
+              Container(
+
+                height: 400,
+
+                color: Colors.pinkAccent,
+
+              ),
+
+            ],
+
+          ),
+
+        ),

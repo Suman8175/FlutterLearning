@@ -1,0 +1,241 @@
+TextButton
+
+ 
+
+TextButton is the replacement for FlatButton.
+It is introduced in Flutter 1.22.0.
+No border
+ 
+
+Properties
+
+ 
+
+child
+onPressed
+onLong Press
+style
+focusNode
+autofocus
+clipBehavior
+ 
+
+Example 1:
+
+ 
+
+import 'package:flutter/material.dart';
+
+
+
+void main() {
+
+  runApp(
+
+    MaterialApp(
+
+      home: Scaffold(
+
+        appBar: AppBar(),
+
+        body: Center(
+
+          child: TextButton(
+
+            child: const Text('Button'),
+
+            onPressed: () {},
+
+          ),
+
+        ),
+
+      ),
+
+    ),
+
+  );
+
+}
+
+ 
+
+Example 2:
+
+
+
+Center(
+
+          child: TextButton(
+
+            child: const Text('Button'),
+
+            onPressed: () {
+
+              log('On Press');
+
+            },
+
+            onLongPress: () {
+
+              log('Long Press');
+
+            },
+
+          ),
+
+        ),
+
+ 
+
+Example 3:
+
+ 
+
+const Center(
+
+          child: TextButton(
+
+            child: Text('Button'),
+
+            onPressed: null,
+
+          ),
+
+        ),
+
+ 
+
+Example 4:
+
+ 
+
+Center(
+
+          child: TextButton.icon(
+
+            icon: const Icon (Icons.arrow_back),
+
+            label: const Text('Back'),
+
+            onPressed: null,
+
+          ),
+
+        ),
+
+ 
+
+Example 5:
+
+ 
+
+TextButton(
+
+            child: Text('Back'),
+
+            onPressed: () {},
+
+            style: TextButton.styleFrom(
+
+              primary: Colors.white,
+
+              backgroundColor: Colors.deepPurpleAccent,
+
+              textStyle: TextStyle(fontSize: 50),
+
+            ),
+
+          ),
+
+ 
+
+Example 6:
+
+ 
+
+TextButton(
+
+            child: Text('Back'),
+
+            onPressed: () {},
+
+            style: TextButton.styleFrom(
+
+              backgroundColor: Colors.green,
+
+              primary: Colors.white,
+
+              backgroundColor: Colors.deepPurpleAccent,
+
+              textStyle: TextStyle(fontSize: 50),
+
+            ),
+
+          ),
+
+ 
+
+Example 7:
+
+ 
+
+TextButton(
+
+            child: Text('Back'),
+
+            onPressed: () {},
+
+            style: TextButton.styleFrom(
+
+              backgroundColor: Colors.green,
+
+              primary: Colors.white,
+
+              backgroundColor: Colors.deepPurpleAccent,
+
+              textStyle: TextStyle(fontSize: 50),
+
+              elevation: 20,
+
+              shadowColor: Colors.purple,
+
+            ),
+
+          ),
+
+ 
+
+Example 8:
+
+ 
+
+TextButton.styleFrom(
+
+              backgroundColor: Colors.green,       
+
+              textStyle: TextStyle(fontSize: 50),
+
+              side: BorderSide(color: Colors.blue, width: 2);
+
+            ),
+
+ 
+
+Example 9:
+
+ 
+
+TextButton.styleFrom(
+
+              backgroundColor: Colors.green,
+
+              textStyle: TextStyle(fontSize: 50),
+
+              shape: BeveledRectangleBorder(
+
+                borderRadius: BorderRadius.all(Radius.circular(10)),
+
+              ),
+
+            ),
