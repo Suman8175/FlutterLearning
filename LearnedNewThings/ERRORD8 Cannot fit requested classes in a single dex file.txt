@@ -1,7 +1,8 @@
 goto android=>app=>build.gradle and add in  existing default config:
 
 defaultConfig {
-      this line  multiDexEnabled true;
+      this line :>
+             multiDexEnabled true;
     }
 
 and in 

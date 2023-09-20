@@ -15,7 +15,17 @@ To give design to button use
  style: const ButtonStyle(
                     backgroundColor: MaterialStatePropertyAll(Colors.redAccent),
                   )
-in ElevatedButton Widjet or Any Button Widjet
+in ElevatedButton Widjet or Any Button Widjet or best option is to use (instead of upside)
+
+            
+                    style: ElevatedButton.styleFrom(),
+          
+Because if we need to add different styles we need to use MaterialStatePropertyAll() for all if we dont use above.
+
+
+
+
+
 
 
 Example 1:
