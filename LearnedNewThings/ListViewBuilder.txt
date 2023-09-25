@@ -1,0 +1,57 @@
+  /*     SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Row(
+                      children: [
+                        for (int i = 1; i <= 5; i++)
+                          HourlyForecast(
+                            time: data['list'][i]['dt'].toString(),
+                            iconChoose: data['list'][i]['weather'][0]['main']
+                                        .toString() ==
+                                    'Rain'
+                                ? Icons.thunderstorm
+                                : data['list'][i]['weather'][0]['main']
+                                            .toString() ==
+                                        'Clear'
+                                    ? Icons.sunny
+                                    : Icons.cloud,
+                            temp: '28 °C',
+                          ),
+                      ],
+                    ),
+                  ), */
+
+
+		Instead to using above use listviewbuilder to improve performance as listviewbuilder only renders as user scrolls
+
+
+
+                  SizedBox(
+                    height: 150,
+                    child: ListView.builder(
+                        scrollDirection: Axis.horizontal,
+                        itemCount: 5,
+                        itemBuilder: (context, index) {
+                          String timestamp =
+                              data['list'][index + 1]['dt'].toString();
+                          DateTime dateTime =
+                              DateTime.fromMillisecondsSinceEpoch(
+                                  int.parse(timestamp) * 1000);
+                          int hour = dateTime.hour;
+                          int minute = dateTime.minute;
+                          return HourlyForecast(
+                            // time: data['list'][index + 1]['dt'].toString(),
+                            time: '$hour:$minute',
+                            temp: '23',
+                            iconChoose: data['list'][index + 1]['weather'][0]
+                                            ['main']
+                                        .toString() ==
+                                    'Rain'
+                                ? Icons.thunderstorm
+                                : data['list'][index + 1]['weather'][0]['main']
+                                            .toString() ==
+                                        'Clear'
+                                    ? Icons.sunny
+                                    : Icons.cloud,
+                          );
+                        }),
+                  ),

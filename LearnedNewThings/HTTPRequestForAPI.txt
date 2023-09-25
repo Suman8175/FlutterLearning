@@ -1,0 +1,42 @@
+
+import 'package:http/http.dart' as http;
+import 'dart:convert';
+void main() async{
+ var url = Uri.parse('https://jsonplaceholder.typicode.com/users/1');
+var response = await http.get(url);              //Get is used to fetch data
+print('Response status: ${response.statusCode}');
+print('Response body: ${jsonDecode(response.body)['address']['street']}');
+
+
+
+Using try catch block in this
+
+
+
+import 'package:http/http.dart' as http;
+import 'dart:convert';
+void trye()async{
+   var url = Uri.parse('https://jsonplaceholder.typicode.com/users/1');
+  try{
+    var response = await http.get(url);
+print('Response status: ${response.statusCode}');
+print('Response body: ${jsonDecode(response.body)['address']['street']}');
+  }
+  catch(e){
+    print('This ran into error');
+  }
+
+
+// print(await http.read(Uri.https('jsonplaceholder.typicode.com','users')));
+}
+void main(){
+trye();
+
+}
+
+
+
+
+
+
+jsonDecode is used to convert body into maps as default .body is of String .After converting it into maps only we can use ['address']['street']. Import 'dart:convert'package to use josnDecode().

@@ -1,0 +1,12 @@
+ListTile(
+               subtitle:const Text('Welcome to gantt'),
+//                horizontalTitleGap:131.0,
+               shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(10),
+            side:const  BorderSide(color: Colors.black),
+          ),
+              leading:const Icon(Icons.cloud),
+                visualDensity: VisualDensity.compact,
+              trailing:const Icon(Icons.sunny),
+              title: Text(items[index],
+                        ),
