@@ -14,3 +14,25 @@
 2.To set keyboard to numbers to keyboard use
 
 keyboardType:TextInputType.number;
+
+
+
+
+
+:>>>>>>>>Another example with controller
+
+  var usernameController = TextEditingController();
+
+TextField(
+              keyboardType: TextInputType.number,
+              controller: usernameController,                //You need to make different controller for every textfield
+              decoration: const InputDecoration(
+                hoverColor: Colors.red,
+                border: OutlineInputBorder(
+                    borderSide: BorderSide(),
+                    borderRadius: BorderRadius.all(Radius.circular(50))),
+                hintText: 'Username',
+                hintStyle: TextStyle(color: Colors.red),
+              ),
+              textAlign: TextAlign.center,
+            ),

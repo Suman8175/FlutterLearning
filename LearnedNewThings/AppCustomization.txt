@@ -1,0 +1,10 @@
+Suppose in a app you want the same default theme,default font,default font size and many more.Use
+
+
+ theme: ThemeData(
+        useMaterial3: true,
+        fontFamily: 'Mooli',  //Download any google font and link it in pubspec.yaml file
+        textTheme: const TextTheme(
+            bodyMedium: TextStyle(fontSize: 24),  //Creates default size of body
+            headlineMedium: TextStyle(fontSize: 58)),  //Use style: Theme.of(context).textTheme.headlineMedium,
+      ),

@@ -1,4 +1,9 @@
-  /*     SingleChildScrollView(
+ImportantNote:As ListView doesnot have it specific height it tries to take maximum height causing pixel overflow issue.So wrap listview in a SizedBox or a Container and give Container or SizedBox a height.It will resolve pixel overflow issue generated from ListView.  
+
+
+Also instead of giving padding to all items in listview there is property as itemExtent:125 gives spacing between each items.
+
+/*     SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
                     child: Row(
                       children: [

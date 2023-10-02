@@ -1,0 +1,96 @@
+  Navigator.of(context).push(MaterialPageRoute(
+                        builder: (context) {
+                          return ProductDDetail(                          //ProductDetail is new page where productData[index] is
+                            product: productData[index],                  // product clicked at index  
+                          );
+                        },
+                      ));
+
+
+
+
+Eg:
+
+1)  :>>>>>>>>>>> In Main.dart
+
+
+import 'package:flutter/material.dart';
+import 'package:newpractise/new_page.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const MaterialApp(
+      home: TestPage(),
+    );
+  }
+}
+
+class TestPage extends StatelessWidget {
+  const TestPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: ElevatedButton(
+            onPressed: () {
+              showDialog(
+                  context: context,
+                  builder: (context) => AlertDialog(
+                        actions: [
+                          TextButton(
+                            onPressed: () {
+                              Navigator.of(context).pop();
+                            },
+                            child: const Text('Close'),
+                          ),
+                          TextButton(
+                            onPressed: () {
+                                Navigator.of(context).pop();
+                              Navigator.of(context)
+                                  .push(MaterialPageRoute(builder: (context) {
+                                return const NewPage();
+                              }));
+                            },
+                            child: const Text('Login'),
+                          ),
+                        ],
+                        title: const Text('Alert Check'),
+                        content: const Text('Alert Box has Appear!!'),
+                        contentPadding: const EdgeInsets.all(20),
+                      ));
+            },
+            child: const Text('Alert')),
+      ),
+    );
+  }
+}
+
+
+:>>>>>>>>>>>>>>>>>>>In new_page.dart
+
+
+
+import 'package:flutter/material.dart';
+
+class NewPage extends StatelessWidget {
+  const NewPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return  Scaffold(
+      appBar: AppBar(
+        title: Text('Title'),
+      ),
+      body: Center(child: Text('New Page')),
+    );
+  }
+}
+

@@ -1,0 +1,4 @@
+Use SafeArea widjet to get everything below of any devices header such as device nabvar which contains time,battery percentage and camera.
+
+
+SafeArea()

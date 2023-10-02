@@ -1,0 +1,63 @@
+import 'package:flutter/material.dart';
+import 'package:newpractise/new_page.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: DefaultTabController(
+        length: 3,
+        child: Scaffold(
+            appBar: AppBar(
+              backgroundColor: Colors.white,
+              title: const Text(
+                'Facebook',
+                style: TextStyle(
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.blue),
+              ),
+              actions: [
+                IconButton(
+                  onPressed: () {},
+                  icon: const Icon(Icons.search),
+                  color: Colors.grey,
+                ),
+                IconButton(
+                    onPressed: () {},
+                    icon: const Icon(Icons.message),
+                    color: Colors.grey)
+              ],
+              bottom: const TabBar(
+                unselectedLabelColor: Colors.grey,
+                indicatorColor: Colors.blue,
+                labelColor: Colors.blue,
+                tabs: [
+                  Tab(
+                    icon: Icon(Icons.home),
+                  ),
+                  Tab(
+                    icon: Icon(Icons.video_call),
+                  ),
+                  Tab(
+                    icon: Icon(Icons.home),
+                  ),
+                ],
+              ),
+            ),
+            body:const TabBarView(children: [
+           NewPage(),
+            Icon(Icons.video_call),
+            Icon(Icons.home)
+          ]),
+                ),
+      ),
+    );
+  }
+}
