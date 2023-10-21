@@ -1,0 +1,84 @@
+
+
+
+1)Provider 
+
+
+2)StateProvider
+
+
+
+import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+
+final helloWorldDataProvider = StateProvider<int>((ref) => 0);   //Here we declare StateProvider instead of Provider
+
+void main() {
+  runApp(const ProviderScope(child: MyApp()));
+}
+
+class MyApp extends ConsumerWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final data = ref.watch(helloWorldDataProvider);
+    return MaterialApp(
+      home: Scaffold(
+        body: Center(
+          child: ElevatedButton(
+              onPressed: () {
+                ref.read(helloWorldDataProvider.notifier).state++;   //StateProvider gives us access to .notifier property
+              },
+              child: Text(data.toString())),
+        ),
+      ),
+    );
+  }
+}
+
+
+
+
+3)FutureProvider  (Can be replacement of futurebuilder)
+
+
+
+import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+
+final userNameProvider = FutureProvider<String?>((ref) => getUser());
+
+void main() {
+  runApp(const ProviderScope(child: MyApp()));
+}
+
+class MyApp extends ConsumerWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    AsyncValue<String?> name = ref.watch(userNameProvider);
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text(name.when(
+            data: (data) => data,
+            error: (error, StackTrace) => error.toString(),
+            loading: () => 'Loading....',
+          )),
+        ),
+      ),
+    );
+  }
+}
+
+
+
+
+//Suppose we get this data from API
+Future<String?> getUser() async {
+  await Future.delayed(const Duration(seconds: 3));
+  return 'Suman';
+  // return null;
+}

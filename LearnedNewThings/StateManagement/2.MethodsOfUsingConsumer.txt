@@ -1,0 +1,107 @@
+There are basically 3 types how we can use Consumer.
+
+
+1)Converting StatelessWidget Class  Into ConsumerWidget Class
+
+
+
+import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+
+final helloWorldDataProvider = Provider((ref) => 'Hello');
+
+void main() {
+  runApp(const ProviderScope(child: MyApp()));
+}
+
+class MyApp extends ConsumerWidget {    //We cange from StateLess to ConsumerWidget
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {   As we changed into ConsumerWidjet Class we have to pass WidgetRef ref to access value of helloWorldDataProvider
+    final dataOfProvider = ref.watch(helloWorldDataProvider);
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(),
+        body: Center(
+          child: Text(dataOfProvider),
+        ),
+      ),
+    );
+  }
+}
+
+
+
+
+2)Wrapping widget inside a Consumer instead of Converting into ConsumerWidget
+
+
+
+import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+
+final helloWorldDataProvider = Provider((ref) => 'Hello Consumer');
+
+void main() {
+  runApp(const ProviderScope(child: MyApp()));
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(),
+        body: Center(
+          child: Consumer(          //Instead we wrap Text inside a Consumer now.
+            builder: (context, ref, child) {
+              final dataOfProvider = ref.watch(helloWorldDataProvider);
+              return Text(dataOfProvider);
+            },
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+
+
+3)Converting StatefulWidget Class  Into ConsumerStatefulWidget Class
+
+
+
+import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+
+final helloWorldDataProvider =
+    Provider((_) => 'Hello Consumer in Stateful Widjet');
+
+void main() {
+  runApp(const ProviderScope(child: MyApp()));
+}
+
+class MyApp extends ConsumerStatefulWidget {
+  const MyApp({super.key});
+
+  @override
+  ConsumerState<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends ConsumerState<MyApp> {
+  @override
+  Widget build(BuildContext context) {
+    final data = ref.watch(helloWorldDataProvider);
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(),
+        body: Center(
+          child: Text(data),
+        ),
+      ),
+    );
+  }
+}

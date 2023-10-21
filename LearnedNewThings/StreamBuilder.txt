@@ -1,0 +1,45 @@
+import 'dart:async';
+
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatefulWidget {
+  const MyApp({super.key});
+
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  int counter = 0;
+  StreamController pipe = StreamController.broadcast();    //Only StreamController() if there is single listner to value.
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: StreamBuilder(                                      //Listner1
+              stream: pipe.stream,
+              builder: (context, snapshot) {
+                return Text(
+                    snapshot.data == null ? '0' : snapshot.data.toString());
+              }),
+        ),
+        floatingActionButton: FloatingActionButton(onPressed: () {
+          pipe.sink.add(counter = counter + 10);                                  //.sink.add is used to add inputs/value in StreamBuilder
+        }),
+        body: Center(
+          child: StreamBuilder(                                              //Listner2
+              stream: pipe.stream,
+              builder: (context, snapshot) {
+                return Text(
+                    snapshot.data == null ? '0' : snapshot.data.toString());
+              }),
+        ),
+      ),
+    );
+  }
+}

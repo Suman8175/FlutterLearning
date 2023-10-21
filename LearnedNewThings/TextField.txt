@@ -1,6 +1,8 @@
  TextField(
                   style: TextStyle(
-                      color: Colors.black, fontStyle: FontStyle.italic),
+                      color: Colors.black, fontStyle: FontStyle.italic), 
+
+			textInputAction: TextInputAction.next,  //To go to next textfield suppose from username to password
                   decoration: InputDecoration(
                       fillColor: Colors.white,
                       filled: true,

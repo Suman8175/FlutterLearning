@@ -1,0 +1,25 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+
+final helloWorldDataProvider = Provider((ref) => 'Hello');   //After wraping we can declare Provider globally to use it's value. 
+
+void main() {
+  runApp(const ProviderScope(child: MyApp()));         //Here we wrap main widget in ProviderScope 
+}
+
+class MyApp extends ConsumerWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final dataOfProvider = ref.watch(helloWorldDataProvider);
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(),
+        body: Center(
+          child: Text(dataOfProvider),
+        ),
+      ),
+    );
+  }
+}
